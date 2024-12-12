@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    
+
+ 
+<title>誕生日クイズ～！</title>
+    
+   
+<style>
+        /* 背景スタイル 
+
+        /* 背
+
+        /* 背景スタイル */
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(
+                to bottom right, 
+                rgba(255, 192, 203, 0.6),   /* ピンク */
+                rgba(173, 216, 230, 0.6),   /* 水色 */
+                rgba(216, 191, 216, 0.6)    /* ライト紫 */
+            );
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* クイズコンテナ */
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #7B68EE; /* ライト紫 */
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .input-row {
+            margin: 10px 0;
+        }
+
+        input {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            width: 40px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #87CEFA; /* 水色 */
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #00BFFF;
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #FF69B4; /* ピンク */
+            font-weight: bold;
+        }
+    </style>
+
+</hea
+
+</
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>こたえはなんでしょう！</h1>
+        <p>かぎのばんごう</p>
+        
+        
+<div class="input-row">
+            
+         
+
+    
+
+ 
+<input type="text" maxlength="1" id="q1-1">
+            
+           
+
+      
+
+   
+<input type="text" maxlength="1" id="q1-2">
+            
+       
+
+   
+<input type="text" maxlength="1" id="q1-3">
+            
+            
+
+        
+
+   
+<input type="text" maxlength="1" id="q1-4">
+        
+        </div
+
+        </
+
+       
+</div>
+
+        
+
+  
+
+
+<p>もよりえき</p>
+        
+        
+
+     
+<nobr>
+  
+<div class="input-row">
+            
+            
+
+          
+
+      
+<input type="text" maxlength="1" id="q2-1">
+            
+          
+
+      
+
+  
+<input type="text" maxlength="1" id="q2-2">
+            
+          
+
+     
+<input type="text" maxlength="1" id="q2-3">
+            
+            
+
+        
+
+    
+<input type="text" maxlength="1" id="q2-4">
+            
+            
+
+       
+
+  
+<input type="text" maxlength="1" id="q2-5">
+</nobr>        
+   
+</div>
+
+        
+
+       
+
+
+   
+<button onclick="checkAnswer()">こたえあわせ</button>
+        
+     
+<p id="result"></p>
+    
+    
+</div>
+
+    
+
+   
+<script>
+        funct
+
+
+       function checkAnswer() {
+            // 正解を定義
+            const correctAnswer1 = "9578";
+            const correctAnswer2 = "おかちまち";
+
+            // 最初の答えを取得
+            const userAnswer1 =
+                document.getElementById("q1-1").value +
+                document.getElementById("q1-2").value +
+                document.getElementById("q1-3").value +
+                document.getElementById("q1-4").value;
+
+            // 次の答えを取得
+            const userAnswer2 =
+                document.getElementById("q2-1").value +
+                document.getElementById("q2-2").value +
+                document.getElementById("q2-3").value +
+                document.getElementById("q2-4").value +
+                document.getElementById("q2-5").value;
+
+            const resultElement = document.getElementById("result");
+
+            // 正解判定
+            if (userAnswer1 === correctAnswer1 && userAnswer2 === correctAnswer2) {
+                resultElement.textContent = "やるやーん！おめでとう🎉待ってるよ！Googleマップを見て来てね！";
+                // Googleマップを開く
+                window.open("https://maps.app.goo.gl/RK8BcM1wTuZMCfHS8", "_blank");
+            } else {
+                resultElement.textContent = "はぁぁ残念！よーく考えてみ？";
+            }
+        }
+    </script>
+
+</b
+</body>
+
+</html
+</html>
